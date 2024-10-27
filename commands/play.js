@@ -11,8 +11,8 @@ exports.execute = async (client, message, args) => {
       const connection = await message.member.voice.channel.join();
       message.channel.send('Looking up your query...')
       const play = require('discordjs-ytdl')
-      await play.play(connection, args.join(" "), 'AIzaSyB93sG0aTlS6BTjV6q_m_ATMjvM80ijg9I')
-      let title = await play.title(args.join(" "), 'AIzaSyB93sG0aTlS6BTjV6q_m_ATMjvM80ijg9I')
+      await play.play(connection, args.join(" "), '')
+      let title = await play.title(args.join(" "), '')
       message.channel.send(`Now playing ${title} requested by ${message.author}`)
    } else {
      message.reply('lol you arent even in a vc');
